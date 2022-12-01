@@ -1,5 +1,7 @@
 import styles from "./Content.module.css";
 import React from "react";
+import UserInfo from "./UserInfo";
+import ResumePreview from "./ResumePreview";
 
 class Content extends React.Component {
   constructor() {
@@ -9,7 +11,8 @@ class Content extends React.Component {
   render() {
     return (
       <section className={styles.main_content}>
-        <p>Content</p>
+        <UserInfo />
+        <ResumePreview />
       </section>
     );
   }

@@ -1,5 +1,7 @@
 .main_content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   border-style: double;
   border-color: gray;
   border-radius: 5px;
@@ -8,5 +10,4 @@
   margin-left: 4rem;
   margin-right: 4rem;
   margin-top: 3rem;
-  margin-bottom: 3rem;
 }
