@@ -7,7 +7,7 @@ class UserInfo extends React.Component {
   }
 
   render() {
-    return <div className={styles.user_input}></div>;
+    return <form className={styles.user_input}> </form>;
   }
 }
 
