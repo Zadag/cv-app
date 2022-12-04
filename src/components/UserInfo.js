@@ -1,4 +1,5 @@
 import React from "react";
+import FormSection from "./FormSection";
 import styles from "./UserInfo.module.css";
 
 class UserInfo extends React.Component {
@@ -7,7 +8,12 @@ class UserInfo extends React.Component {
   }
 
   render() {
-    return <form className={styles.user_input}> </form>;
+    return (
+      <form className={styles.user_input}>
+        <FormSection />
+        <FormSection />
+      </form>
+    );
   }
 }
 

@@ -1,0 +1,16 @@
+.form_section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.contact_info {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  margin-top: 0.5rem;
+}
