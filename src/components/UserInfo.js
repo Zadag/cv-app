@@ -1,6 +1,8 @@
 import React from "react";
-import FormSection from "./FormSection";
 import styles from "./UserInfo.module.css";
+import ContactInfo from "./ContactInfo";
+import ExperienceInfo from "./ExperienceInfo";
+import EducationInfo from "./EducationInfo";
 
 class UserInfo extends React.Component {
   constructor(props) {
@@ -10,8 +12,9 @@ class UserInfo extends React.Component {
   render() {
     return (
       <form className={styles.user_input}>
-        <FormSection />
-        <FormSection />
+        <ContactInfo handleContactInput={this.props.handleContactInput} />
+        <EducationInfo />
+        <ExperienceInfo />
       </form>
     );
   }
