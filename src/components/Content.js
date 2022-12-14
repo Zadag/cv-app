@@ -27,7 +27,7 @@ class Content extends React.Component {
         ],
         experience: [
           {
-            uniqid: uniqid(),
+            uniqId: uniqid(),
             company: "",
             position: "",
             startDate: "",
@@ -42,13 +42,12 @@ class Content extends React.Component {
   handleContactInput = (e) => {
     const value = e.target.value;
     const inputName = e.target.name;
-    const newUserInfo = { ...this.state.userInfo };
-    console.log(value, inputName);
-    console.log(newUserInfo);
-    newUserInfo.contactInfo[inputName] = e.target.value;
+    const userInfo = { ...this.state.userInfo };
+    userInfo.contactInfo[inputName] = e.target.value;
     this.setState({
-      newUserInfo,
+      userInfo,
     });
+    console.log(this.state);
   };
 
   render() {
