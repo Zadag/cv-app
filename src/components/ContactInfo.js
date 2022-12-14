@@ -8,22 +8,22 @@ const ContactInfo = (props) => {
       <input
         placeholder="Full Name"
         name="name"
-        onChange={(e) => props.handleContactInput(e, "contactInfo")}
+        onChange={(e) => props.handleContactInput(e)}
       ></input>
       <input
         placeholder="Email Address"
         name="email"
-        onChange={(e) => props.handleContactInput(e, "contactInfo")}
+        onChange={(e) => props.handleContactInput(e)}
       ></input>
       <input
         placeholder="Phone Number"
         name="phoneNumber"
-        onChange={(e) => props.handleContactInput(e, "contactInfo")}
+        onChange={(e) => props.handleContactInput(e)}
       ></input>
       <input
         placeholder="Location"
         name="location"
-        onChange={(e) => props.handleContactInput(e, "contactInfo")}
+        onChange={(e) => props.handleContactInput(e)}
       ></input>
     </section>
   );

@@ -39,11 +39,11 @@ class Content extends React.Component {
     };
   }
 
-  handleContactInput = (e, sectionId) => {
+  handleContactInput = (e) => {
     const value = e.target.value;
     const inputName = e.target.name;
     const newUserInfo = { ...this.state.userInfo };
-    console.log(value, inputName, sectionId);
+    console.log(value, inputName);
     console.log(newUserInfo);
     newUserInfo.contactInfo[inputName] = e.target.value;
     this.setState({
