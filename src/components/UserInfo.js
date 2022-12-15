@@ -12,7 +12,10 @@ class UserInfo extends React.Component {
   render() {
     return (
       <form className={styles.user_input}>
-        <ContactInfo handleContactInput={this.props.handleContactInput} />
+        <ContactInfo
+          handleContactInput={this.props.handleContactInput}
+          contactValues={this.props.contactValues}
+        />
         <EducationInfo />
         <ExperienceInfo />
       </form>

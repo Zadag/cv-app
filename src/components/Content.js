@@ -53,9 +53,14 @@ class Content extends React.Component {
   };
 
   render() {
+    const { contactInfo, education, experience } = this.state.userInfo;
+    console.log(contactInfo);
     return (
       <section className={styles.main_content}>
-        <UserInfo handleContactInput={this.handleContactInput} />
+        <UserInfo
+          handleContactInput={this.handleContactInput}
+          contactValues={contactInfo}
+        />
         <ResumePreview />
       </section>
     );
