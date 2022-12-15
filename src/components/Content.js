@@ -42,10 +42,12 @@ class Content extends React.Component {
   handleContactInput = (e) => {
     const value = e.target.value;
     const inputName = e.target.name;
-    const userInfo = { ...this.state.userInfo };
-    userInfo.contactInfo[inputName] = e.target.value;
+    // Make a deep copy of this.state.userInfo and modify that copies nested property
+    const userInfo = structuredClone(this.state.userInfo);
+    userInfo.contactInfo[inputName] = value;
+    // Replace userInfo with this new copy that shares no references
     this.setState({
-      userInfo,
+      userInfo: userInfo,
     });
     console.log(this.state);
   };
