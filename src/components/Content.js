@@ -49,17 +49,18 @@ class Content extends React.Component {
     this.setState({
       userInfo: userInfo,
     });
-    console.log(this.state);
   };
 
   render() {
     const { contactInfo, education, experience } = this.state.userInfo;
-    console.log(contactInfo);
+
     return (
       <section className={styles.main_content}>
         <UserInfo
           handleContactInput={this.handleContactInput}
           contactValues={contactInfo}
+          educationArr={education}
+          experienceArr={experience}
         />
         <ResumePreview />
       </section>

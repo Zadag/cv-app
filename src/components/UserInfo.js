@@ -16,8 +16,8 @@ class UserInfo extends React.Component {
           handleContactInput={this.props.handleContactInput}
           contactValues={this.props.contactValues}
         />
-        <EducationInfo />
-        <ExperienceInfo />
+        <EducationInfo educationArr={this.props.educationArr} />
+        <ExperienceInfo experienceArr={this.props.experienceArr} />
       </form>
     );
   }

@@ -6,9 +6,21 @@
   margin-right: 2rem;
 }
 
-.contact_info {
+.education_info {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.add_btn {
+  margin-top: 0.5rem;
+  width: 30%;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.add_btn:hover {
+  background-color: rgb(41, 41, 41);
+  color: white;
 }
 
 input {
