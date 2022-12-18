@@ -14,25 +14,30 @@ const ExperienceInfo = ({
             <h2 className={styles.experience_info}>Experience</h2>
             <input
               placeholder="Company Name"
+              name="company"
               value={experience.company}
               onChange={(e) => handleExperienceInput(e, experience.uniqId)}
             ></input>
             <input
+              name="position"
               placeholder="Job Title"
               value={experience.position}
               onChange={(e) => handleExperienceInput(e, experience.uniqId)}
             ></input>
             <input
+              name="startDate"
               placeholder="Start Date"
               value={experience.startDate}
               onChange={(e) => handleExperienceInput(e, experience.uniqId)}
             ></input>
             <input
+              name="endDate"
               placeholder="End Date"
               value={experience.endDate}
               onChange={(e) => handleExperienceInput(e, experience.uniqId)}
             ></input>
             <textarea
+              name="responsibilities"
               placeholder="Responsibilities"
               value={experience.responsibilites}
               onChange={(e) => handleExperienceInput(e, experience.uniqId)}
