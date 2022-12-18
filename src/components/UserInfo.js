@@ -21,7 +21,11 @@ class UserInfo extends React.Component {
           handleEducationInput={this.props.handleEducationInput}
           handleAddEducation={this.props.handleAddEducation}
         />
-        <ExperienceInfo experienceArr={this.props.experienceArr} />
+        <ExperienceInfo
+          experienceArr={this.props.experienceArr}
+          handleExperienceInput={this.props.handleExperienceInput}
+          handleAddExperience={this.props.handleAddExperience}
+        />
       </form>
     );
   }

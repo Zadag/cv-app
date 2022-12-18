@@ -64,6 +64,34 @@ class Content extends React.Component {
     });
   };
 
+  handleExperienceInput = (e, id) => {
+    const value = e.target.value;
+    const inputName = e.target.name;
+
+    const userInfo = structuredClone(this.state.userInfo);
+    const experience = userInfo.experience.find((item) => item.uniqId === id);
+    experience[inputName] = value;
+
+    this.setState({
+      userInfo: userInfo,
+    });
+  };
+
+  handleAddExperience = () => {
+    const userInfo = structuredClone(this.state.userInfo);
+    userInfo.experience.push({
+      uniqId: uniqid(),
+      company: "",
+      position: "",
+      startDate: "",
+      endDate: "",
+      responsibilities: "",
+    });
+    this.setState({
+      userInfo: userInfo,
+    });
+  };
+
   handleAddEducation = () => {
     const userInfo = structuredClone(this.state.userInfo);
     userInfo.education.push({
@@ -91,6 +119,8 @@ class Content extends React.Component {
           experienceArr={experience}
           handleEducationInput={this.handleEducationInput}
           handleAddEducation={this.handleAddEducation}
+          handleExperienceInput={this.handleExperienceInput}
+          handleAddExperience={this.handleAddExperience}
         />
         <ResumePreview />
       </section>

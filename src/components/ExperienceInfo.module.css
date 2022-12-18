@@ -13,6 +13,7 @@
 
 .add_btn {
   margin-top: 0.5rem;
+  margin-left: 2rem;
   width: 30%;
   cursor: pointer;
   transition: 0.1s;
