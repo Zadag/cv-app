@@ -51,6 +51,34 @@ class Content extends React.Component {
     });
   };
 
+  handleEducationInput = (e, id) => {
+    const value = e.target.value;
+    const inputName = e.target.name;
+
+    const userInfo = structuredClone(this.state.userInfo);
+    const education = userInfo.education.find((item) => item.uniqId === id);
+    education[inputName] = value;
+
+    this.setState({
+      userInfo: userInfo,
+    });
+  };
+
+  handleAddEducation = () => {
+    const userInfo = structuredClone(this.state.userInfo);
+    userInfo.education.push({
+      uniqId: uniqid(),
+      school: "",
+      major: "",
+      startDate: "",
+      endDate: "",
+    });
+    this.setState({
+      userInfo: userInfo,
+    });
+    console.log("yo", this.state);
+  };
+
   render() {
     const { contactInfo, education, experience } = this.state.userInfo;
 
@@ -61,6 +89,8 @@ class Content extends React.Component {
           contactValues={contactInfo}
           educationArr={education}
           experienceArr={experience}
+          handleEducationInput={this.handleEducationInput}
+          handleAddEducation={this.handleAddEducation}
         />
         <ResumePreview />
       </section>
