@@ -5,6 +5,7 @@ const ExperienceInfo = ({
   experienceArr,
   handleAddExperience,
   handleExperienceInput,
+  handleDeleteButton,
 }) => {
   return (
     <>
@@ -13,7 +14,14 @@ const ExperienceInfo = ({
           <section className={styles.form_section} key={experience.uniqId}>
             <div className={styles.top_layer}>
               <h2 className={styles.experience_info}>Experience</h2>
-              <div className={styles.delete_button}>X</div>
+              <div
+                className={styles.delete_button}
+                onClick={() =>
+                  handleDeleteButton("experience", experience.uniqId)
+                }
+              >
+                X
+              </div>
             </div>
             <input
               placeholder="Company Name"

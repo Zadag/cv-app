@@ -5,6 +5,7 @@ const EducationInfo = ({
   educationArr,
   handleEducationInput,
   handleAddEducation,
+  handleDeleteButton,
 }) => {
   return (
     <>
@@ -13,7 +14,14 @@ const EducationInfo = ({
           <section className={styles.form_section} key={education.uniqId}>
             <div className={styles.top_layer}>
               <h2 className={styles.education_info}>Education</h2>
-              <div className={styles.delete_button}>X</div>
+              <div
+                className={styles.delete_button}
+                onClick={() =>
+                  handleDeleteButton("education", education.uniqId)
+                }
+              >
+                X
+              </div>
             </div>
             <input
               placeholder="School Name"

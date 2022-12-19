@@ -107,6 +107,15 @@ class Content extends React.Component {
     console.log("yo", this.state);
   };
 
+  handleDeleteButton = (category, id) => {
+    const userInfo = structuredClone(this.state.userInfo);
+    const filteredArr = userInfo[category].filter((obj) => obj.uniqId !== id);
+    userInfo[category] = filteredArr;
+    this.setState({
+      userInfo: userInfo,
+    });
+  };
+
   render() {
     const { contactInfo, education, experience } = this.state.userInfo;
 
@@ -121,6 +130,7 @@ class Content extends React.Component {
           handleAddEducation={this.handleAddEducation}
           handleExperienceInput={this.handleExperienceInput}
           handleAddExperience={this.handleAddExperience}
+          handleDeleteButton={this.handleDeleteButton}
         />
         <ResumePreview />
       </section>
