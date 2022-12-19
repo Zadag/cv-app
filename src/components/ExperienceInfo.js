@@ -11,7 +11,10 @@ const ExperienceInfo = ({
       {experienceArr.map((experience) => {
         return (
           <section className={styles.form_section} key={experience.uniqId}>
-            <h2 className={styles.experience_info}>Experience</h2>
+            <div className={styles.top_layer}>
+              <h2 className={styles.experience_info}>Experience</h2>
+              <div className={styles.delete_button}>X</div>
+            </div>
             <input
               placeholder="Company Name"
               name="company"

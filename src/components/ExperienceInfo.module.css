@@ -35,3 +35,26 @@ textarea {
   resize: none;
   height: 4rem;
 }
+
+.top_layer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete_button {
+  height: 2rem;
+  width: 3rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgb(219, 219, 219);
+  border: 2px solid rgb(99, 99, 99);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete_button:hover {
+  background-color: red;
+  border: 2px solid red;
+  transition: 0.2s;
+}
