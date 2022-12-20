@@ -10,16 +10,18 @@ class ResumePreview extends React.Component {
     return (
       <div className={styles.resume_preview}>
         <div className={styles.personal_info}>
-          <h1 className={styles.resume_name}>Samuel Jackson</h1>
+          <h1 className={styles.resume_name}>
+            {this.props.contactValues.name}
+          </h1>
           <div className={styles.user_details_container}>
             <div className={styles.user_detail}>
-              <p>518-473-8744</p>
+              <p>{this.props.contactValues.phoneNumber}</p>
             </div>
             <div className={styles.user_detail}>
-              <p>kb3youknow@gmail.com</p>
+              <p>{this.props.contactValues.email}</p>
             </div>
             <div className={styles.user_detail}>
-              <p>Albany NY</p>
+              <p>{this.props.contactValues.location}</p>
             </div>
           </div>
         </div>
