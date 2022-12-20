@@ -29,6 +29,12 @@ const ContactInfo = ({ handleContactInput, contactValues }) => {
         onChange={(e) => handleContactInput(e)}
         value={contactValues.location}
       ></input>
+      <textarea
+        placeholder="Details"
+        name="objective"
+        onChange={(e) => handleContactInput(e)}
+        value={contactValues.objective}
+      ></textarea>
     </section>
   );
 };

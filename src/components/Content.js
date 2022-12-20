@@ -15,6 +15,7 @@ class Content extends React.Component {
           email: "",
           phoneNumber: "",
           location: "",
+          objective: "",
         },
         education: [
           {
@@ -132,7 +133,11 @@ class Content extends React.Component {
           handleAddExperience={this.handleAddExperience}
           handleDeleteButton={this.handleDeleteButton}
         />
-        <ResumePreview />
+        <ResumePreview
+          contactValues={contactInfo}
+          educationArr={education}
+          experienceArr={experience}
+        />
       </section>
     );
   }
