@@ -1,0 +1,38 @@
+.section_header {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.experience_preview_section {
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.experience_group {
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  justify-content: space-between;
+}
+
+.company {
+  font-weight: 600;
+}
+
+.position {
+  font-weight: 500;
+}
+
+.dates {
+  display: flex;
+}
+
+.date {
+  font-weight: 500;
+  font-family: cursive;
+}
+
+.responsibilities {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}

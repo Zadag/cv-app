@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-h1 {
+.site_header {
   color: white;
   font-size: 2rem;
   margin-left: 1rem;

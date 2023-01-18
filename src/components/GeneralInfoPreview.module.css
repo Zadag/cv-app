@@ -4,6 +4,7 @@
   align-items: center;
   width: 90%;
   min-height: 10%;
+  margin-top: 2rem;
 }
 
 .resume_name {
@@ -39,7 +40,7 @@
 }
 
 .svg_icon {
-  margin-right: 0.2rem;
+  margin-right: 0.4rem;
 }
 
 .user_objective {

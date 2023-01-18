@@ -8,19 +8,24 @@ const EducationInfoPreview = ({ educationArr }) => {
 
   if (!hasEducation) return;
   return (
-    <>
-      <h1 className={styles.section_header}>Education</h1>
+    <div className={styles.education_preview_section}>
+      <h1 className={styles.section_header}>Education:</h1>
       {educationArr.map((education) => {
         return (
-          <div>
-            <p>{education.school}</p>
-            <p>{education.major}</p>
-            <p>{education.startDate}</p>
-            <p>{education.endDate}</p>
+          <div className={styles.education_group}>
+            <div>
+              <p className={styles.school}>{education.school}</p>
+              <p>{education.major}</p>
+            </div>
+            <div className={styles.dates}>
+              <p className={styles.date}>{education.startDate}</p>
+              <p className={styles.date}>-</p>
+              <p className={styles.date}>{education.endDate}</p>
+            </div>
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 
